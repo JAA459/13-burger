@@ -13,11 +13,11 @@ var burger = {
         });
     },
 
-    update: function(colToUpdate, newColValue, colToSearch, colValue, cb) {
-        orm.updateOne("burgers", colToUpdate, newColValue, colToSearch, colValue, function (res) {
-            cb(res);
+    update: function(objColVals, condition, cb) {
+        orm.updateOne("burgers", objColVals, condition, function(res) {
+          cb(res);
         });
-    }
+      }
 
 
 };
